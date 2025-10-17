@@ -1,11 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useState } from "react";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "/vite.svg";
+import "./App.css";
 
 function App() {
   //    [readOnlyData, functionToUpdateReadOnlyData] = sourceOfData(defaultData);
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+  const [fruit] = useState("mango");
+
+  /* 
+ Lifecycle methods:
+ componentDidMount
+ componentWillUnmount
+ componentDidChange
+ */
+
+  // componentDidUpdate - still things to do!
+  useEffect(() => {
+    console.log("App component updated!");
+    console.log("Count is now: " + count)
+  }, [count])
+
+  useEffect(() => {
+    console.log("User's favourite fruit is " + fruit)
+  }, [fruit])
+
+  useEffect(() => {
+    console.log("Count or favourite fruit updated!")
+  }, [count, fruit])
 
   return (
     <>
@@ -30,7 +52,7 @@ function App() {
         Click on the Vite and React logos to learn more
       </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
