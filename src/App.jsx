@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
+import { PokemonRenderer } from "./PokemonRenderer";
 
 function App() {
   //    [readOnlyData, functionToUpdateReadOnlyData] = sourceOfData(defaultData);
@@ -64,6 +65,9 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
+      <div>
+        <PokemonRenderer />
+      </div>
     </>
   );
 }
