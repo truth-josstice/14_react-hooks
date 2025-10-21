@@ -20,32 +20,30 @@ function App() {
   // componentDidUpdate - still things to do!
   useEffect(() => {
     console.log("App component updated!");
-    console.log("Count is now: " + count)
-  }, [count])
+    console.log("Count is now: " + count);
+  }, [count]);
 
   useEffect(() => {
-    console.log("User's favourite fruit is " + fruit)
-  }, [fruit])
+    console.log("User's favourite fruit is " + fruit);
+  }, [fruit]);
 
   useEffect(() => {
-    console.log("Count or favourite fruit updated!")
-  }, [count, fruit])
+    console.log("Count or favourite fruit updated!");
+  }, [count, fruit]);
 
-// componentDidMount specifically does NOT depend on any state variables
+  // componentDidMount specifically does NOT depend on any state variables
   useEffect(() => {
     console.log("App component has booted up!");
     // componentWilUnmount is just a return value from a useEffect
-    return (() => {
+    return () => {
       console.log("App component is unloading from the page now.");
-    });
+    };
   }, []);
-
-  
-    
-  
 
   return (
     <>
+      <GetRandomPokemonButton />
+      <PokemonRenderer />
       <div>
         <a href="https://vite.dev" target="_blank">
           <img src={viteLogo} className="logo" alt="Vite logo" />

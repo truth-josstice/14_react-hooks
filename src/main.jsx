@@ -12,8 +12,8 @@ createRoot(document.getElementById("root")).render(
     For instance API calls and such.*/}
     <PokeApiContextProvider>
       <App />
-      <GetRandomPokemonButton />
-      <PokemonRenderer />
+      {/* <GetRandomPokemonButton />
+      <PokemonRenderer /> */}
     </PokeApiContextProvider>
 
     {/* If the context is basic and has no logic, you could use the provider directly */}
