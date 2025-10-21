@@ -3,7 +3,7 @@ import { PokeApiContext, defaultPokeApiContextData } from "./PokeApiContext";
 import { useLocalStorage } from "react-use";
 
 export function PokeApiContextProvider({ children }) {
-  const [storedPokeId, setStoredPokeId, removePokeId] = useLocalStorage(
+  const [storedPokeId, setStoredPokeId] = useLocalStorage(
     "pokeId",
     25
   );
